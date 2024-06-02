@@ -10,12 +10,12 @@ class PokerEngine:
         self.num_players = num_players
         self.decision_threshold = decision_threshold
     
-    def set_player_hand(self, player_hand: List[Card]) -> None:
-        self.player_hand = player_hand
+    def set_player_hand(self, player_hand: List[str]) -> None:
+        self.player_hand = [CardFactory.create_card(card_str) for card_str in player_hand]
 
-    def set_community_cards(self, community_cards: List[Card]) -> None:
-        self.community_cards = community_cards
-    
+    def set_community_cards(self, community_cards: List[str]) -> None:
+        self.community_cards = [CardFactory.create_card(card_str) for card_str in community_cards]
+
     def set_num_players(self, num_players: int) -> None:
         self.num_players = num_players
     
@@ -96,3 +96,25 @@ class PokerEngine:
         else:
             return 'fold'
 
+
+class CardFactory:
+    @staticmethod
+    def create_card(card_str: str) -> Card:
+        """
+        Creates a treys.Card object from a string representation of a card.
+        Args:
+            card_str (str): String representation of a card
+        Returns:
+            Card: treys.Card object
+        """
+        # Replace "10" with "T" at the start of the string
+        if card_str.startswith("10"):
+            card_str = "T" + card_str[2:]
+
+        # Lower case the second letter to match treys.Card format
+        if len(card_str) != 2:
+            print("Invalid card format should be 2 characters long. e.g. 'Ah' for Ace of Hearts.")
+            return None
+
+        card_str = card_str[:-1] + card_str[-1].lower()
+        return Card.new(card_str)
