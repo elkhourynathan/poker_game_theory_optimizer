@@ -14,10 +14,10 @@ class CardTracker:
         self.frame_height = 0
     
     def detect_frames(self, frames):
-        batch_size = 10
+        batch_size = 5
         detections = []
         for i in range(0, len(frames), batch_size):
-            detection_batch = self.model.predict(frames[i:i+batch_size], conf=0.5)
+            detection_batch = self.model.predict(frames[i:i+batch_size], conf=0.1)
             detections += detection_batch
         return detections
 
