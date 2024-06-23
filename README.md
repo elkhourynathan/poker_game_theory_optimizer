@@ -24,3 +24,6 @@ pip install -r requirements.txt
 python main.py
 ```
 3. View the annotated output, which is saved to the `output_videos` directory.
+
+## Future Plans
+1. Develope and integrate a optimized C++ poker hand evaluator to enhance solution speed
