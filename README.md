@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ## Usage
 
 1. Use the default input or add your own input inside the `data` directory.
-2. Run the main script:
+2. Run the main pipeline:
 ``` bash
 python main.py
 ```
