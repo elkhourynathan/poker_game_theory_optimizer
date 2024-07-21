@@ -2,7 +2,7 @@
 
 ## Overview
 
-Developed a poker game theory optimizer in Python for poker video analytics. This project involved creating a sophisticated video analytics pipeline using a custom-trained YOLOv8 model and ByteTrack to accurately distinguish and track player cards from community cards. Additionally, a Monte Carlo simulation was implemented to calculate the probabilities of winning, tying, and losing, which enables strategic decisions on whether to fold, call, or raise based on the expected value. Evalatuions are based on Texas Hold'em.
+Developed a poker game theory optimizer in Python for poker video analytics. This project involved creating a sophisticated video analytics pipeline using a custom-trained YOLOv8 model and ByteTrack to accurately distinguish and track player cards from community cards. Additionally, a Monte Carlo simulation was implemented to calculate the probabilities of winning, tying, and losing, which enables strategic decisions on whether to fold, call, or raise based on the expected value. Evaluations are based on Texas Hold'em.
 
 ## Installation
 
